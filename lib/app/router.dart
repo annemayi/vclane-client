@@ -8,6 +8,7 @@ import 'package:vclane_client/presentation/devices/device_detail_screen.dart';
 import 'package:vclane_client/presentation/stream/live_stream_screen.dart';
 import 'package:vclane_client/presentation/profile/profile_screen.dart';
 import 'package:vclane_client/presentation/profile/edit_profile_screen.dart';
+import 'package:vclane_client/presentation/maker/vehicle_class_screen.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
 
@@ -18,6 +19,8 @@ GoRouter createRouter(WidgetRef ref) {
     Authenticated _ => true,
     _ => false,
   };
+
+  final isMaker = authState is Authenticated && authState.user.role == 'maker';
 
   return GoRouter(
     navigatorKey: _rootNavigatorKey,
@@ -58,6 +61,13 @@ GoRouter createRouter(WidgetRef ref) {
         path: '/profile/edit',
         parentNavigatorKey: _rootNavigatorKey,
         builder: (_, __) => const EditProfileScreen(),
+      ),
+      GoRoute(
+        path: '/maker/devices/:id/classes',
+        parentNavigatorKey: _rootNavigatorKey,
+        redirect: (_, __) => isMaker ? null : '/dashboard',
+        builder: (_, state) =>
+            VehicleClassScreen(deviceId: state.pathParameters['id']!),
       ),
     ],
   );
