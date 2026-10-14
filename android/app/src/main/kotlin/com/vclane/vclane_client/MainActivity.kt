@@ -1,0 +1,5 @@
+package com.vclane.vclane_client
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity : FlutterActivity()

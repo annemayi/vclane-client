@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "693767962146",
+    "project_id": "vclane",
+    "storage_bucket": "vclane.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693767962146:android:d9e0183fd26cb7028c547b",
+        "android_client_info": {
+          "package_name": "com.vclane.vclane_client"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuneLxO3xVUudXUoFwCt_9ZUXYQ6Ps1_s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

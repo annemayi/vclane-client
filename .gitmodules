@@ -1,0 +1,3 @@
+[submodule "docs/vclane-docs"]
+	path = docs/vclane-docs
+	url = https://github.com/vclane/vclane-docs.git
